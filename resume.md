@@ -1,3 +1,7 @@
+<table>
+  <tr>
+    <td style="vertical-align: top; padding-right: 16px;">
+      
 # Sai Nageswar Satchidanand
 **Senior Software Engineer / Applied Scientist**
 
@@ -5,6 +9,15 @@
 📧 sainageswar@alumni.iitm.ac.in  
 📞 +91 70223 74569  
 🔗 [LinkedIn](https://linkedin.com/in/sainageswar) | [GitHub](https://github.com/SaiNageswarS)
+
+    </td>
+    <td style="vertical-align: top; text-align: right; width: 160px;">
+      <img src="profile_pic.jpg" alt="Sai Nageswar Satchidanand"
+           width="140" height="140"
+           style="border-radius: 50%; object-fit: cover;" />
+    </td>
+  </tr>
+</table>
 
 ---
 
