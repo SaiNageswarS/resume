@@ -1,37 +1,37 @@
-<table>
-  <tr>
-    <td style="vertical-align: top; padding-right: 16px;">
-      
 # Sai Nageswar Satchidanand
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+<div style="flex: 1;">
+
 **Senior Software Engineer / Applied Scientist**
 
-📍 Hyderabad, India  
-📧 sainageswar@alumni.iitm.ac.in  
-📞 +91 70223 74569  
-🔗 [LinkedIn](https://linkedin.com/in/sainageswar) | [GitHub](https://github.com/SaiNageswarS)
+**Contact Information:**
+- **Location:** Hyderabad, India
+- **Email:** sainageswar@alumni.iitm.ac.in
+- **Phone:** +91 70223 74569
+- **LinkedIn:** [linkedin.com/in/sainageswar](https://linkedin.com/in/sainageswar)
+- **GitHub:** [github.com/SaiNageswarS](https://github.com/SaiNageswarS)
 
-    </td>
-    <td style="vertical-align: top; text-align: right; width: 160px;">
-      <img src="profile_pic.jpg" alt="Sai Nageswar Satchidanand"
-           width="140" height="140"
-           style="border-radius: 50%; object-fit: cover;" />
-    </td>
-  </tr>
-</table>
+</div>
+<div style="flex-shrink: 0; margin-left: 20px;">
+<img src="profile_pic.jpg" alt="Sai Nageswar Satchidanand" width="140" height="140" style="border-radius: 50%; object-fit: cover; border: 2px solid #ddd;" />
+</div>
+</div>
 
 ---
 
 ## Summary
-Senior Software Engineer with deep expertise in **LLMs, Search, Distributed Systems, and ML Pipelines**. Proven experience building **high-scale, low-latency systems** for production AI, including vector search, caching, and observability. Strong background in **causal inference, deep learning, big data**, and **cloud-native platforms**. Passionate about system design, applied ML, and developer productivity.
+Senior Software Engineer with deep expertise in **Agents, LLMs, Search, Distributed Systems, and ML Pipelines**. Proven experience building **large-scale, low-latency systems** for production AI, including turn based agents, semantic search, caching, and observability. Strong background in **causal inference, deep learning, big data**, and **cloud-native platforms**. Passionate about system design, applied ML, and developer productivity.
 
 ---
 
 ## Work Experience
 
 ### **Senior Applied Scientist** — Microsoft  
-*Core AI & Search (Page Insights)*  
+*Core AI & Search (Copilot Search)*  
 **May 2022 – Present**
 
+- Building **turn based agent systems**, iterating on SLMs for planning and tool selection, and LLMs for grounded answer generation with multi-step reasoning. 
 - Built **offline pipelines** generating LLM-based titles, captions, and web answers for Bing’s top queries.
 - Designed an **end-to-end vector indexing system (HNSW)** to cache and serve LLM outputs via nearest-neighbor search on the Search Results Page.
 - Developed **online LLM pipelines** for long-tail queries without impacting page render latency.
