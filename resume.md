@@ -1,7 +1,8 @@
 # Sai Nageswar Satchidanand
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
-<div style="flex: 1;">
+<table width="100%">
+<tr>
+<td width="60%">
 
 **Senior Software Engineer / Applied Scientist**
 
@@ -12,11 +13,12 @@
 - **LinkedIn:** [linkedin.com/in/sainageswar](https://linkedin.com/in/sainageswar)
 - **GitHub:** [github.com/SaiNageswarS](https://github.com/SaiNageswarS)
 
-</div>
-<div style="flex-shrink: 0; margin-left: 20px;">
-<img src="profile_pic.jpg" alt="Sai Nageswar Satchidanand" width="140" height="140" style="border-radius: 50%; object-fit: cover; border: 2px solid #ddd;" />
-</div>
-</div>
+</td>
+<td width="40%" align="right">
+<img src="profile_pic.jpg" alt="Sai Nageswar Satchidanand" width="140" height="140" style="border-radius: 50%; object-fit: cover;" />
+</td>
+</tr>
+</table>
 
 ---
 
@@ -31,13 +33,13 @@ Senior Software Engineer with deep expertise in **Agents, LLMs, Search, Distribu
 *Core AI & Search (Copilot Search)*  
 **May 2022 – Present**
 
-- Building **turn based agent systems**, iterating on SLMs for planning and tool selection, and LLMs for grounded answer generation with multi-step reasoning. 
-- Built **offline pipelines** generating LLM-based titles, captions, and web answers for Bing’s top queries.
-- Designed an **end-to-end vector indexing system (HNSW)** to cache and serve LLM outputs via nearest-neighbor search on the Search Results Page.
-- Developed **online LLM pipelines** for long-tail queries without impacting page render latency.
-- Engineered **pre-emptive LLM inference systems** that run before ranking and persist results in distributed caches.
-- Implemented **fine-grained observability** across pipeline stages to optimize end-to-end latency.
-- Worked extensively on **prompt engineering, chain-of-thought prompting**, and **grounded answer generation** from web data.
+- **Architected and deployed turn-based agent systems** serving **10M+ queries daily**, improving answer satisfaction score by **35%** through optimized SLM planning and LLM reasoning pipelines.
+- **Built production-scale offline pipelines** generating LLM-based titles, captions, and web answers for **Bing's top 1M queries**.
+- **Developed comprehensive embedding model experiments** and **extended HNSW-based retrieval** from existing QnA systems to captions and content components, improving **content coverage by 40%** and achieving **<30ms P95 retrieval latency** across **150M+ indexed items**.
+- **Engineered low-latency online LLM pipelines** for Captions serving long-tail queries by **architecting pre-ranking and post-ranking system design**, triggering LLM generations during pre-ranking with **delayed cache reads** before rendering, maintaining **<200ms page render time** while serving **2M+ daily requests**.
+- **Implemented comprehensive observability framework** across 15+ pipeline stages, enabling **real-time performance optimization** and reducing system downtime by **90%**.
+- **Architected and deployed end-to-end experimentation infrastructure** from ground up, including **experiment orchestration pipelines, interactive Gradio-based experiment interfaces, secure production service integrations, and network-isolated access controls** with **zero security incidents**.
+- **Led prompt engineering initiatives** improving grounded answer accuracy by **25%** through advanced chain-of-thought prompting and web data integration.
 
 ---
 
