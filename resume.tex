@@ -9,7 +9,8 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{graphicx}
-\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
 % Color definitions
 \definecolor{darkblue}{RGB}{0,51,102}
@@ -42,6 +43,14 @@
     \vspace{0.3em}
 }
 
+% Command for circular image
+\newcommand{\circularimage}[2]{%
+\begin{tikzpicture}
+\clip (0,0) circle (#1);
+\node[anchor=center] at (0,0) {\includegraphics[width=2*#1]{#2}};
+\end{tikzpicture}%
+}
+
 % Remove page numbers
 \pagestyle{empty}
 
@@ -52,32 +61,34 @@
 
 \begin{document}
 
-% Header with name, contact info, and photo
+% Header matching markdown exactly
 \begin{center}
     {\Huge \textbf{Sai Nageswar Satchidanand}}
-    
-    \vspace{0.3em}
-    {\large \textbf{Senior Software Engineer / Applied Scientist}}
 \end{center}
 
 \vspace{0.5em}
 
-% Contact info and photo layout
-\begin{tabularx}{\textwidth}{X r}
+% Table matching the markdown structure exactly
+\begin{tabular}{p{0.6\textwidth} p{0.4\textwidth}}
 \begin{minipage}[t]{0.6\textwidth}
-    \textbf{Contact Information:} \\
-    \faMapMarker\ Hyderabad, India \\
-    \faEnvelope\ \href{mailto:sainageswar@alumni.iitm.ac.in}{sainageswar@alumni.iitm.ac.in} \\
-    \faPhone\ +91 70223 74569 \\
-    \faLinkedin\ \href{https://linkedin.com/in/sainageswar}{linkedin.com/in/sainageswar} \\
-    \faGithub\ \href{https://github.com/SaiNageswarS}{github.com/SaiNageswarS}
+    \textbf{Senior Software Engineer / Applied Scientist}
+    
+    \vspace{0.5em}
+    \textbf{Contact Information:}
+    \begin{itemize}[leftmargin=0pt, itemsep=0pt]
+    \item[\faMapMarker] Hyderabad, India
+    \item[\faEnvelope] \href{mailto:sainageswar@alumni.iitm.ac.in}{sainageswar@alumni.iitm.ac.in}
+    \item[\faPhone] +91 70223 74569
+    \item[\faLinkedin] \href{https://linkedin.com/in/sainageswar}{linkedin.com/in/sainageswar}
+    \item[\faGithub] \href{https://github.com/SaiNageswarS}{github.com/SaiNageswarS}
+    \end{itemize}
 \end{minipage}
 &
-\begin{minipage}[t]{0.35\textwidth}
-    \raggedleft
-    \includegraphics[width=140pt,height=140pt,keepaspectratio]{profile_pic.jpg}
+\begin{minipage}[t]{0.4\textwidth}
+    \hfill
+    \circularimage{70pt}{profile_pic.jpg}
 \end{minipage}
-\end{tabularx}
+\end{tabular}
 
 \vspace{0.5em}
 \hrule
