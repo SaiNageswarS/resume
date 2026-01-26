@@ -143,10 +143,20 @@ Scalable remote-sensing pipeline using **Temporal + GDAL** for satellite imagery
 
 ---
 
-## Skills (Optional Section)
+## Technical Expertise
 
-- **Languages:** Go, C++, Java, Python, C#, SQL  
-- **ML/AI:** LLMs, Embeddings, Vector Search, Causal Inference, Deep Learning  
-- **Systems:** Distributed Systems, gRPC, Kubernetes, Temporal, Spark  
-- **Cloud:** Azure, GCP, Docker, IaC  
-- **Databases:** MongoDB, SQL Server, NoSQL  
+### **ML Engineering & AI Systems**
+- **Production LLM Pipelines:** Agent orchestration, prompt engineering, chain-of-thought reasoning, grounding systems
+- **Large-Scale Retrieval:** HNSW embeddings, vector search, semantic indexing (150M+ items, <30ms P95 latency)
+- **Experimentation Infrastructure:** A/B testing frameworks, Gradio interfaces, secure service integration
+- **Causal Inference:** Treatment effect measurement, DNN modeling, feature engineering for terabyte-scale datasets
+
+### **Distributed Systems & Platform Engineering**
+- **Container Orchestration:** Kubernetes control planes, multi-tenant cluster management, reconciliation systems
+- **High-Performance Systems:** Sub-200ms latency optimization, caching strategies, observability frameworks
+- **Microservices:** gRPC, typesafe APIs, service mesh, API-to-API authentication
+
+### **Programming & Technologies**
+- **Languages:** Go, Python, Java, C# (production expertise), SQL
+- **ML/Data:** PyTorch/TensorFlow, Spark, Temporal, statistical analysis, graph algorithms
+- **Cloud & Infrastructure:** Azure, AWS, GCP, Docker, MongoDB, vector databases  
