@@ -15,22 +15,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Install pandoc and LaTeX
+    - name: Install LaTeX packages
       run: |
         sudo apt-get update
-        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra
         
-    - name: Generate PDF from Markdown
+    - name: Generate PDF from LaTeX
       run: |
-        pandoc resume.md -o resume.pdf \
-          --pdf-engine=pdflatex \
-          --variable geometry:margin=1in \
-          --variable fontsize=11pt \
-          --variable linestretch=1.15 \
-          --variable colorlinks=true \
-          --variable linkcolor=blue \
-          --variable urlcolor=blue \
-          --variable toccolor=blue
+        pdflatex resume.tex
+        # Run twice to resolve cross-references
+        pdflatex resume.tex
           
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4

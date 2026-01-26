@@ -1,0 +1,191 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,51,102}
+\definecolor{lightgray}{RGB}{128,128,128}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    pdfborder={0 0 0}
+}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+% Custom commands
+\newcommand{\workplace}[4]{
+    \subsection{\textbf{#1} — #2}
+    \textit{#3} \\
+    \textbf{#4}
+    \vspace{0.2em}
+}
+
+\newcommand{\project}[3]{
+    \subsection{\textbf{#1}}
+    \href{#2}{#2} \\
+    #3
+    \vspace{0.3em}
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlist{noitemsep, topsep=0pt, leftmargin=1.2em}
+
+\begin{document}
+
+% Header with name and contact info
+\begin{center}
+    {\Huge \textbf{Sai Nageswar Satchidanand}}
+    
+    \vspace{0.3em}
+    {\large \textbf{Senior Software Engineer / Applied Scientist}}
+    
+    \vspace{0.5em}
+    \begin{tabular}{c c c}
+        \faMapMarker\ Hyderabad, India & 
+        \faEnvelope\ \href{mailto:sainageswar@alumni.iitm.ac.in}{sainageswar@alumni.iitm.ac.in} &
+        \faPhone\ +91 70223 74569 \\
+        \faLinkedin\ \href{https://linkedin.com/in/sainageswar}{linkedin.com/in/sainageswar} &
+        \faGithub\ \href{https://github.com/SaiNageswarS}{github.com/SaiNageswarS} &
+    \end{tabular}
+\end{center}
+
+\vspace{0.5em}
+\hrule
+\vspace{0.5em}
+
+% Summary
+\section{Summary}
+Senior Software Engineer with deep expertise in \textbf{Agents, LLMs, Search, Distributed Systems, and ML Pipelines}. Proven experience building \textbf{large-scale, low-latency systems} for production AI, including turn based agents, semantic search, caching, and observability. Strong background in \textbf{causal inference, deep learning, big data}, and \textbf{cloud-native platforms}. Passionate about system design, applied ML, and developer productivity.
+
+% Work Experience
+\section{Work Experience}
+
+\workplace{Senior Applied Scientist}{Microsoft}{Core AI \& Search (Copilot Search)}{May 2022 – Present}
+
+\begin{itemize}
+\item \textbf{Architected and deployed turn-based agent systems} serving \textbf{10M+ queries daily}, improving answer satisfaction score by \textbf{35\%} through optimized SLM planning and LLM reasoning pipelines.
+\item \textbf{Built production-scale offline pipelines} generating LLM-based titles, captions, and web answers for \textbf{Bing's top 1M queries}.
+\item \textbf{Developed comprehensive embedding model experiments} and \textbf{extended HNSW-based retrieval} from existing QnA systems to captions and content components, improving \textbf{content coverage by 40\%} and achieving \textbf{<30ms P95 retrieval latency} across \textbf{150M+ indexed items}.
+\item \textbf{Engineered low-latency online LLM pipelines} for Captions serving long-tail queries by \textbf{architecting pre-ranking and post-ranking system design}, triggering LLM generations during pre-ranking with \textbf{delayed cache reads} before rendering, maintaining \textbf{<200ms page render time} while serving \textbf{2M+ daily requests}.
+\item \textbf{Implemented comprehensive observability framework} across 15+ pipeline stages, enabling \textbf{real-time performance optimization} and reducing system downtime by \textbf{90\%}.
+\item \textbf{Architected and deployed end-to-end experimentation infrastructure} from ground up, including \textbf{experiment orchestration pipelines, interactive Gradio-based experiment interfaces, secure production service integrations, and network-isolated access controls}, supporting \textbf{100+ concurrent A/B experiments} while maintaining \textbf{secure API authentication} across \textbf{20+ microservices} with \textbf{zero security incidents}.
+\item \textbf{Led prompt engineering initiatives} improving grounded answer accuracy by \textbf{25\%} through advanced chain-of-thought prompting and web data integration.
+\end{itemize}
+
+\workplace{Senior Software Engineer}{Microsoft}{Substrate Platform, Office 365}{Jan 2021 – May 2022}
+
+\begin{itemize}
+\item \textbf{Architected and implemented} a \textbf{Kubernetes-for-Kubernetes} control plane managing \textbf{50+ multi-region clusters} serving \textbf{100M+ Office 365 users} with \textbf{99.9\% uptime}.
+\item \textbf{Architected reconciliation systems} maintaining desired vs actual state across clusters, reducing configuration drift by \textbf{95\%} and deployment failures by \textbf{80\%}.
+\item \textbf{Designed and secured end-to-end infrastructure} managing Key Vault, logging sidecars, monitoring, and API-to-API auth for \textbf{entire Office 365 substrate}, eliminating \textbf{100+ manual intervention points}.
+\item \textbf{Created reusable typesafe spec framework} adopted by \textbf{5+ teams}, replacing error-prone YAML configurations and reducing deployment bugs by \textbf{70\%}.
+\item \textbf{Built composite inventory abstraction} enabling real-time topology queries across \textbf{multiple storage backends}, improving system visibility and reducing troubleshooting time by \textbf{60\%}.
+\item \textbf{Led technical design and implementation} for critical platform components, mentoring \textbf{3 junior engineers} and establishing coding standards for the team.
+\end{itemize}
+
+\workplace{SDE II}{Amazon}{Consumer Behavior Analytics}{Jun 2017 – Dec 2020}
+
+\begin{itemize}
+\item Applied \textbf{causal inference} to measure incremental impact of ads on purchases and high-value user actions (Prime signup, Video/Music usage).
+\item Trained \textbf{DNN models} mapping control and treatment variables to user outcomes.
+\item Built \textbf{feature engineering pipelines} to capture correlations between user actions.
+\item Modeled user-action similarity using \textbf{graph representations (Jaccard index)} and applied \textbf{spectral analysis}.
+\item Processed \textbf{terabytes of data} using distributed Spark pipelines for feature transformation and inference.
+\item Implemented \textbf{regular model retraining}, weight regularization, and experimented with \textbf{sequential models} for campaign effects.
+\end{itemize}
+
+\workplace{SDE II}{Codenation / Trilogy Innovations}{}{May 2016 – Jun 2017}
+
+\begin{itemize}
+\item Mined large-scale source-code repositories and built \textbf{AST embeddings} for duplicate and similar code detection.
+\item Developed \textbf{auto-refactoring tools} using Eclipse JDT and Clone Digger.
+\item Built an \textbf{organization-wide executive dashboard} tracking developer productivity using statistical analysis.
+\item Deployed services using \textbf{Docker-based orchestration}.
+\end{itemize}
+
+\workplace{Software Development Engineer}{Gozoomo}{}{Jul 2015 – May 2016}
+
+\begin{itemize}
+\item Built a \textbf{peer-to-peer used-car marketplace} with scalable microservices.
+\item Auto-generated \textbf{typesafe client/server code} using Protobuf.
+\item Implemented \textbf{secure API-to-API authentication}, monitoring, and alerting.
+\item Developed a \textbf{custom chat framework} using Firebase and Angular.
+\end{itemize}
+
+\workplace{Software Development Engineer}{Codenation / Trilogy Innovations}{}{Jul 2014 – Jun 2015}
+
+\begin{itemize}
+\item Worked on \textbf{enterprise analytics and data warehousing systems} using Microsoft SQL Server.
+\item Modernized legacy systems with refactoring, unit tests, and mocking.
+\item Added \textbf{CI/CD pipelines} with integration testing.
+\end{itemize}
+
+% Education
+\section{Education}
+
+\subsection{\textbf{M.Tech, Computer Science Engineering}}
+Indian Institute of Technology Madras \\
+\textbf{2012 – 2014}
+\begin{itemize}
+\item Research: \textit{Semi-Supervised Multi-View Multi-Relation Collective Inference using Hypergraphs}
+\item Published at \textbf{IJCAI 2015}
+\end{itemize}
+
+\subsection{\textbf{B.Tech, Computer Science Engineering}}
+National Institute of Science and Technology \\
+\textbf{2006 – 2010}
+\begin{itemize}
+\item Built a \textbf{scientific mathematics tool} parsing free-form equations and solving ODEs with graph visualization.
+\end{itemize}
+
+% Publications
+\section{Publications}
+
+\textbf{Extended Discriminative Random Walk: A Hypergraph Approach to Multi-View Multi-Relational Transductive Learning} \\
+\textit{IJCAI 2015} \\
+Sai Nageswar Satchidanand, Harini Ananthapadmanaban, Balaraman Ravindran \\
+\href{https://dl.acm.org/doi/abs/10.5555/2832747.2832778}{https://dl.acm.org/doi/abs/10.5555/2832747.2832778}
+
+% Open Source Projects
+\section{Open Source Projects}
+
+\project{go-api-boot}{https://github.com/SaiNageswarS/go-api-boot}{Production-grade \textbf{Go gRPC microservice framework} with zero-config HTTPS, MongoDB ODM (vector search), Temporal workflows, and cloud abstractions (Azure/GCP).}
+
+\project{GraphMind}{https://github.com/SaiNageswarS/GraphMind}{Semantic code intelligence platform that builds \textbf{RDF knowledge graphs across repositories}, enabling LLM-powered multi-repo code generation.}
+
+\project{agent-boot}{https://github.com/SaiNageswarS/agent-boot}{Multi-tenant \textbf{RAG system} integrating Claude with domain-specific knowledge using Go + Python ML pipelines.}
+
+\project{GeoSpatialAnalysis}{https://github.com/SaiNageswarS/GeoSpatialAnalysis}{Scalable remote-sensing pipeline using \textbf{Temporal + GDAL} for satellite imagery (MODIS/FAPAR) processing.}
+
+% Skills
+\section{Skills}
+
+\begin{itemize}
+\item \textbf{Languages:} Go, C++, Java, Python, C\#, SQL
+\item \textbf{ML/AI:} LLMs, Embeddings, Vector Search, Causal Inference, Deep Learning
+\item \textbf{Systems:} Distributed Systems, gRPC, Kubernetes, Temporal, Spark
+\item \textbf{Cloud:} Azure, GCP, Docker, IaC
+\item \textbf{Databases:} MongoDB, SQL Server, NoSQL
+\end{itemize}
+
+\end{document}
