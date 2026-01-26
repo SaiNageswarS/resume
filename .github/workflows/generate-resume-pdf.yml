@@ -1,0 +1,51 @@
+name: Generate Resume PDF
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Install pandoc and LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+        
+    - name: Generate PDF from Markdown
+      run: |
+        pandoc resume.md -o resume.pdf \
+          --pdf-engine=pdflatex \
+          --variable geometry:margin=1in \
+          --variable fontsize=11pt \
+          --variable linestretch=1.15 \
+          --variable colorlinks=true \
+          --variable linkcolor=blue \
+          --variable urlcolor=blue \
+          --variable toccolor=blue
+          
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-pdf-${{ github.sha }}
+        path: resume.pdf
+        retention-days: 90
+        
+    - name: Create Release (on push to master)
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: resume-${{ github.run_number }}
+        name: Resume PDF - Build ${{ github.run_number }}
+        files: resume.pdf
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
