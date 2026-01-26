@@ -7,6 +7,9 @@ on:
     branches: [ master ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
@@ -25,10 +28,19 @@ jobs:
         pdflatex resume.tex
         # Run twice to resolve cross-references
         pdflatex resume.tex
-          
-    - name: Upload PDF artifact
+        
+    - name: Upload PDF artifact (backup)
       uses: actions/upload-artifact@v4
       with:
         name: resume-pdf-${{ github.run_number }}
         path: resume.pdf
         retention-days: 90
+        
+    - name: Commit and push PDF to repository
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add resume.pdf
+        git diff --staged --quiet || git commit -m "Auto-generate resume PDF - Build ${{ github.run_number }}"
+        git push

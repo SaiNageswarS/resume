@@ -52,22 +52,32 @@
 
 \begin{document}
 
-% Header with name and contact info
+% Header with name, contact info, and photo
 \begin{center}
     {\Huge \textbf{Sai Nageswar Satchidanand}}
     
     \vspace{0.3em}
     {\large \textbf{Senior Software Engineer / Applied Scientist}}
-    
-    \vspace{0.5em}
-    \begin{tabular}{c c c}
-        \faMapMarker\ Hyderabad, India & 
-        \faEnvelope\ \href{mailto:sainageswar@alumni.iitm.ac.in}{sainageswar@alumni.iitm.ac.in} &
-        \faPhone\ +91 70223 74569 \\
-        \faLinkedin\ \href{https://linkedin.com/in/sainageswar}{linkedin.com/in/sainageswar} &
-        \faGithub\ \href{https://github.com/SaiNageswarS}{github.com/SaiNageswarS} &
-    \end{tabular}
 \end{center}
+
+\vspace{0.5em}
+
+% Contact info and photo layout
+\begin{tabularx}{\textwidth}{X r}
+\begin{minipage}[t]{0.6\textwidth}
+    \textbf{Contact Information:} \\
+    \faMapMarker\ Hyderabad, India \\
+    \faEnvelope\ \href{mailto:sainageswar@alumni.iitm.ac.in}{sainageswar@alumni.iitm.ac.in} \\
+    \faPhone\ +91 70223 74569 \\
+    \faLinkedin\ \href{https://linkedin.com/in/sainageswar}{linkedin.com/in/sainageswar} \\
+    \faGithub\ \href{https://github.com/SaiNageswarS}{github.com/SaiNageswarS}
+\end{minipage}
+&
+\begin{minipage}[t]{0.35\textwidth}
+    \raggedleft
+    \includegraphics[width=140pt,height=140pt,keepaspectratio]{profile_pic.jpg}
+\end{minipage}
+\end{tabularx}
 
 \vspace{0.5em}
 \hrule
