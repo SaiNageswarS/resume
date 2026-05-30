@@ -27,3 +27,5 @@
 
 # Claude local files (if any)
 .claude/
+
+*.pdf

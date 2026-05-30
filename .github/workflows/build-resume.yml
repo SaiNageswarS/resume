@@ -1,0 +1,33 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'resume.tex'
+      - '.github/workflows/build-resume.yml'
+  pull_request:
+    paths:
+      - 'resume.tex'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/xu-cheng/texlive-full:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build PDF
+        run: |
+          xelatex -interaction=nonstopmode resume.tex
+          xelatex -interaction=nonstopmode resume.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: resume.pdf
