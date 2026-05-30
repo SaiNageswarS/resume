@@ -14,6 +14,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: ghcr.io/xu-cheng/texlive-full:latest
 
@@ -26,8 +28,10 @@ jobs:
           xelatex -interaction=nonstopmode resume.tex
           xelatex -interaction=nonstopmode resume.tex
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+      - name: Release PDF
+        if: github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
         with:
-          name: resume-pdf
-          path: resume.pdf
+          tag_name: latest
+          name: Latest Resume
+          files: resume.pdf
